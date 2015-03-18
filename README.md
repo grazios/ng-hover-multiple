@@ -1,2 +1,2 @@
-# ng-finder
+# ng-hover-multiple
 initial commit
