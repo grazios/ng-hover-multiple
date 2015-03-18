@@ -1,0 +1,21 @@
+extends layout
+block append vars
+  -var title = "Home"
+
+
+block content
+  div(ng-controller="SeedController")
+    div(style="float:left")
+      div(class="target" ng-hover-multiple data-label="name" data-input="select" data-output="output" data-message="message")
+        ul
+          li(ng-repeat="opt in output") {{select[opt].name}}
+      
+      ul
+        li(ng-repeat="opt in select")
+          input(type="text" ng-model="opt.name")
+          buttom(ng-click="destroy($index)") destroy
+      buttom(ng-click="select.push({})") add
+    div
+      textarea(style="margin-left:50px;width:500px;height:500px;") {{output | json}}
+    div(style="clear:both") {{ body }}
+    

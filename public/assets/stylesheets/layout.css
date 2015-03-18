@@ -1,0 +1,64 @@
+body {
+  height: 100%;
+  color: #f00;
+}
+.target {
+  width: 500px;
+  height: 200px;
+  background: #dadada;
+}
+.nghm_element {
+  position: relative;
+/*
+    style transclude area
+  */
+/*
+    style console
+  */
+/*
+    style message
+  */
+}
+.nghm_element .nghm_multiple_wrap {
+  zIndex: 200;
+  width: inherit;
+  height: inherit;
+}
+.nghm_element div.nghm_transclude {
+  position: absolute;
+}
+.nghm_element ul.nghm_console_wrap {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  border: solid 1px #000;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  background: #fff;
+}
+.nghm_element .nghm_message_wrap {
+  zIndex: 100;
+  display: none;
+}
+.nghm_element:hover .nghm_multiple_wrap {
+  width: inherit;
+  height: inherit;
+  background: rgba(153,153,170,0.314);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: dashed rgba(0,0,0,0.314) 5px;
+}
+.nghm_element:hover .nghm_multiple_wrap p.nghm_message_wrap {
+  display: block;
+  width: inherit;
+  height: inherit;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

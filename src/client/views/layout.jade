@@ -1,0 +1,36 @@
+doctype html
+-var projectName = "Seed App"
+
+block vars
+  -var pageid = "body"
+mixin htmlHeadBody
+  head
+    meta(charset="UTF-8")
+
+    block title
+      title#title #{projectName}
+    block base
+      base(href="/")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    block scripts
+      script(src="/assets/libs/angular.js")
+      script(src="/assets/javascripts/ngHoverMultiple/ng-hover-multiple.js")
+      script(src="/assets/javascripts/seed.js")
+
+    block styles
+      link(rel="stylesheet" href="/assets/stylesheets/layout.css" title="Seed Style")
+
+  body(id="#{pageid}" ng-app="seedApp")
+    block header
+      include header
+
+    div#contents_wrap
+      block content
+
+    block footer
+      include footer
+
+html
+  mixin htmlHeadBody
